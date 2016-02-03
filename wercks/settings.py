@@ -1,4 +1,5 @@
 # Django settings for wercks project.
+from confy import env, database, cache
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -13,8 +14,8 @@ import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(
-        env="WERCKER_POSTGRESQL_URL",
-        default="sqlite:///local_db.sqlite"
+        env="WERCKER_POSTGRESQL_URL"
+        #default="sqlite:///local_db.sqlite"
     )
 }
 
