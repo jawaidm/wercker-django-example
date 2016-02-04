@@ -1,8 +1,10 @@
-box: wercker/python
+#box: wercker/python
+box: python:2.7-slim
 services:
     - wercker/postgresql
 # Build definition
 build:
+#dev:
   # The steps that will be executed on build
   steps:
     # A step that executes `pip install` command
